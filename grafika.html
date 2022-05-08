@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Grafika</title>
+</head>
+<header class="header">
+  <div class="overlay"></div>
+    <h1>Grafika we dwoje</h1>
+</header>
+<body>
+  
+    <div class="zdj">  
+        
+        <div id="navMain">
+            <ul>
+                <li><a class="a1" id="a1" onclick="myFunction()"> 
+                  <img src="./zdjecia/j1.jpg" class="zdj1" alt="Jadwiga" ></a>
+
+                    <ul id="menu">
+                        <li ><a id="desc1" onClick="setTimeout(scrollToBottom, delay)">Biografia</a></li>
+                        <li><a id="myBtn1" >Galeria prac</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="navMain2">
+            <ul>
+                <li><a class="a2" id="a2" onclick="myFunction1()"> 
+                   <img src="./zdjecia/r.jpg"  class="zdj2" alt="Ryszard" > </a>
+
+                    <ul id="menu1">
+                        <li ><a id="desc2" onClick="setTimeout(scrollToBottom, delay)" value="a" >Biografia</a></li>
+                        <li ><a id="myBtn" >Galeria prac</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+     
+      <section id="myModal" class="modal">
+        <!-- content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Ryszard Otręba</h2>
+          </div>
+
+          <div class="btn-container"></div>
+            <div class="section-center">
+              <!-- single -->
+    
+            </div>
+        </div>
+      
+      </section>
+
+      <section id="myModal1" class="modal">
+        <!-- content -->
+        <div class="modal-content1">
+          <div class="modal-header">
+            <span class="close1">&times;</span>
+            <h2>Jadwiga Kaim-Otręba</h2>
+          </div>
+
+          <div class="btn-container1"></div>
+            <div class="section-center1">
+              <!-- single -->
+              
+            </div>
+        </div>
+      </section>
+
+      <div id="one"></div>
+
+       <script type="module">
+      import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
+      import PhotoSwipeDynamicCaption from './photoswipe-dynamic-caption-plugin.esm.js';
+
+      const smallScreenPadding = {
+        top: 0, bottom: 0, left: 0, right: 0
+      };
+      const largeScreenPadding = {
+        top: 30, bottom: 30, left: 0, right: 0
+      };
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '.section-center,.section-center1',
+        children: 'a',
+
+        paddingFn: (viewportSize) => {
+          return viewportSize.x < 700 ? smallScreenPadding : largeScreenPadding
+        },
+        pswpModule: () => import('./photoswipe.esm.js')
+      });
+      const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+        mobileLayoutBreakpoint: 700,
+        type: 'auto',
+        mobileCaptionOverlapRatio: 1
+      });
+ 
+      lightbox.init();
+      </script>
+
+      <script> 
+      let first=document.querySelector("#desc1");
+      let second=document.querySelector("#desc2");
+
+      let goodmorning=(message, bgcolor)=>
+		{
+      let msg=document.querySelector("#one");
+      msg.innerHTML=message;
+      msg.style.backgroundColor=bgcolor;
+    }
+    
+      first.addEventListener('click', function(){
+      
+      goodmorning('<span style="font-weight: bold;">Jadwiga Kaim-Otręba</span> (ur. 1935 r. w Krakowie) - artysta grafik. \
+Tworzy głównie w technice linorytu i drzeworytu. W latach 1954-1960 studiowała w Akademii Sztuk Pięknych w Krakowie. \
+Jej wykładowcami byli m. in. Jan Świderski, Maciej Makarewicz, Włodzimierz Kunz. Dyplom uzyskała na Wydziale Grafiki w pracowni litografii prof. Kondrada Srzednickego.<br> \
+Najbardziej twórczy i intensywny okres w jej twórczości to lata po ukończeniu studiów. Wtedy też aktywnie \
+działała w Związku Polskich Artystów Plastyków, pełniąc między innymi funkcję członka Zarządu Sekcji \
+Grafiki w Krakowie.<br> W 1961 r. wyszła za mąż za Ryszarda Otrębę; mają dwóch synów - Pawła i Mateusza.<br> Zawodowo \
+związała się z Technikum  Odzieżowym w Krakowie, w którym uczyła rysunku zawodowego.<br> <p><h4 style="font-weight: bold;"> WYSTAWY:</h4> </p> Brała udział w \
+kilkudziesięciu zbiorowych wystawach grafiki, rysunku i plakatu w kraju i za granicą: w Austrii, Belgii,\
+Czechosłowacji, Kubie, RFN, Szwajcarii, Turcjii, USA, Włoszech oraz uczestyniczyła w Międzynarodowym \
+Biennale Grafiku w Krakowie. W swym dorobku ma wiele indywidualnych wystaw grafiki, rysunku i plakatu \
+m. in: 1964 Zakopane, Sztokholm, 1966 Erfurt, 1970 Genewa, 1994 Kraków , 2012 Warszawa, 2018 Zielona \
+Góra. Jest laureatką wielu nagród i wyróżnień w konkursach i wystawach grafiki i plakatu. Jej prace \
+znajdują się w zbiorach Muzeum Narodowego w Krakowie, Muzeum Archidiecezji Warszawskiej, Muzeum w \
+Tarnowie, National Museum w Sztokholmie, w zbiorach Pratt Graphics Center w Nowym Jorku \
+oraz w zbiorach prywatnych.<br> <p><h4 style="font-weight: bold;"> NAGRODY:</h4> </p>Zdobyła wiele nagród i wyróżnień m. in: wyróżnienie Ministra Kultury i Sztuki na \
+Ogólnopolskiej Wystawie Grafiki, Polskie Dzieło Plastyczne w 15-lecie PRL w Warszawie, trzy wyróżnienia w konkursach\
+na Najlepszą Grafikę Miesiąca oraz I Nagrodę w konkursie na projekt logogramu z okazji Dnia krakowskiego na EXPO \'92 w Sewilli. ','hsla(208, 24%, 68%, 0.215');
+    });
+    
+      second.addEventListener('click', function(){
+      goodmorning('<span style="font-weight: bold;">Ryszard Otręba</span> (ur. 1932 r. w Suszcu) - artysta grafik i wykładowca na ASP. Zajmuje się \
+wzornictwem przemysłowym, projektowaniem graficznym, rysunkiem, grafiką artystyczną pracuje w technice \
+gipsorytu i druku cyfrowego. W latach 1953-1959 rozpoczął studia w Akademii Sztuk Pięknych w Krakowie na \
+Wydziale Architektury Wnętrz. W roku 1956 dodatkowo zajął się studiami graficznymi w pracowni prof. Mieczysława Wejmana. \
+Po studiach został pracownikiem naukowym Akademii Sztuk Pięknych, pracował także projektując formy \
+przemysłowe. W 1966 wyjechał na roczne stypendium do Pratt Institute w Nowym Jorku. Buduje abstrakcyjne \
+geometryczne kompozycje, przeważnie czarno-białe, ale sięga również po kolor.Jego prace znalazły się m.in. \
+w Muzeum Guggenheima, Museum of Modern Art w Nowym Jorku, Bibliotece Kongresu Stanów Zjednoczonych i \
+Instytucie Smithsona w Waszyngtonie, w Philadelphia Museum of Art, w Museum of Fine Arts w Bostonie i w The \
+Art Institute of Chicago. Weszły także w skład stałych ekspozycji w muzeach europejskich, m.in. National \
+Museum w Sztokholmie, Francuska Biblioteka Narodowa w Paryżu, Tate Gallery i Muzeum Wiktorii i Alberta w \
+Londynie, Australian National Gallery, National Museum of Modern Art w Tokio, Albertina w Wiedniu. W Polsce \
+można zobaczyć jego twórczość w Muzeach Narodowych (w Krakowie, Warszawie, Poznaniu, Gdańsku, Szczecinie), \
+Muzeum Sztuki w Łodzi, Muzeum Architektury we Wrocławiu, Muzeum Śląskim w Katowicach, Muzeum Śląskim we \
+Wrocławiu, w zbiorach Biblioteki Narodowej w Warszawie i innych.','hsla(192, 45%, 78%, 0.315');
+    });
+
+function scrollToBottom () {
+  const element = document.getElementById('one')
+  element.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
+      var delay = 10;
+      setTimeout( myfunction, delay );
+
+      function myFunction () {
+  const men = document.getElementById('menu')
+  const men2 = document.getElementById('menu1')
+  const a1 = document.getElementById('a1')
+  const a2 = document.getElementById('a2')
+
+  men.classList.toggle('mystyle')
+  men2.classList.remove('mystyle')
+  a1.classList.toggle('mystyle')
+  a2.classList.remove('mystyle')
+ 
+}
+
+      function myFunction1 () {
+  const men = document.getElementById('menu1')
+  const men2 = document.getElementById('menu')
+  const a1 = document.getElementById('a2')
+  const a2 = document.getElementById('a1')
+
+  men.classList.toggle('mystyle')
+  men2.classList.remove('mystyle')
+  a1.classList.toggle('mystyle')
+  a2.classList.remove('mystyle')
+}
+    </script>
+
+     <footer class="footer">
+      <div class="container">
+        <a class="footer__logo" >
+          <img src="./zdjecia/x04a.png" />
+        </a>
+
+        <div class="footer__social">
+         
+          <a href="https://github.com/buziusbastus1" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <title>Github</title>
+              <path
+              fill="#FFF"
+               d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="mailto:kubaotreba121@wp.pl">
+            <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <title>Mail</title>
+              <path  fill="#FFF" d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__links col1">
+          <a href="https://mck.krakow.pl/wystawy/grafika-we-dwoje-jadwiga-kaim-otreba-i-ryszard-otreba" target="_blank">
+            Międzynarodowe Centrum Kultury</a>
+          <a href="https://nck.krakow.pl/galeriacentrum/ryszard-otreba-grafika-i-rysunek-przestrzen-dla-sztuki/" target="_blank">Galeria CENTRUM</a>
+          <a href="https://www.asp.krakow.pl/aktualnosci/wernisaz-wystawy-grafik-i-rysunkow-ryszarda-otreby#!otreba_01">ASP</a>
+        </div>
+
+        <div class="footer__links col2">
+          <a href="https://manggha.pl/sklep/produkt/jadwiga-i-ryszard-otreba-grafika" target="_blank">
+            Manggha</a>
+          <a href="https://desa.pl/" target="_blank">DESA</a>
+          <a href="mailto:kubaotreba121@wp.pl" target="_blank">Kontakt</a>
+        </div>
+
+      </div>
+      <div class="attribution">
+    <div class="sof">   software used:  <a href="https://photoswipe.com/" target="_blank"> photoswipe.com</a></div> 
+    <div class="op">&copy;
+      Grafiki umieszczone na stronie pochodzą ze zbiorów własnych artystów</div>
+      </div>
+    </footer>
+    
+<script src="./script.js"></script>
+</body>
+</html>

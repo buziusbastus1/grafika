@@ -1,0 +1,130 @@
+.footer {
+  background-color: var(--blue);
+  color: var(--clr-white);
+  padding: 2.5rem;
+  text-align: center;
+
+  .container {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        "logo links1 links2"
+        "social links1 links2";
+      gap: 1rem;
+      justify-items: center;
+    }
+  }
+
+  a {
+    color: var(--clr-white);
+    text-decoration: none;
+  }
+
+  &__logo {
+    display: inline-block;
+
+    @include breakpoint-down(medium) {
+      margin-bottom: 1rem;
+    }
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+  }
+
+  &__social {
+    @include breakpoint-down(medium) {
+      margin-bottom: 1rem;
+    }
+    @include breakpoint-up(large) {
+      grid-area: social;
+      align-self: end;
+    }
+
+    a {
+      display: inline-block;
+      height: 1.25rem;
+      svg path {
+        transition: fill 150ms ease-in-out;
+      }
+      &:hover svg path {
+        fill: black;
+      }
+    }
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    @include breakpoint-up(large) {
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    &.col1 {
+      @include breakpoint-up(large) {
+        grid-area: links1;
+      }
+    }
+    &.col2 {
+      @include breakpoint-down(medium) {
+        margin-bottom: 1.875rem;
+      }
+      @include breakpoint-up(large) {
+        grid-area: links2;
+      }
+    }
+
+    a {
+      line-height: 2.25;
+      transition: color 150ms ease-in-out;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  .attribution {
+    margin-top: 4rem;
+    font-size: 1rem;
+    display: grid;
+     grid-template-columns: 30% auto;
+    
+    & .sof{
+grid-column: 1;
+font-size:medium ;
+@include breakpoint-down(medium) {
+  margin: 1rem;
+}
+    }
+    & .op{
+grid-column: 2;
+color: var(--gr);
+font-family: var(--ava);
+font-size: small;
+@include breakpoint-down(medium) {
+  margin: 0.5rem;
+}
+    }
+
+   
+    
+    @include breakpoint-down(medium) {
+      margin-top: 0;
+      display: block;
+      border-spacing: 10px;
+    }
+   
+
+    & a:hover{
+       
+        color: black;
+      
+    }
+  }
+}
