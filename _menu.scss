@@ -62,7 +62,7 @@
     transform: scaleX(1.01) translateX(1px);
   }
     }
-    @include breakpoint-down(medium){
+    @include breakpoint-down(large){
       .a1.mystyle{
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -84,7 +84,7 @@
   }
 }
 
-@include breakpoint-down(medium){
+@include breakpoint-down(large){
   .a2.mystyle{
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -142,7 +142,7 @@
   }
 }
 
-  @include breakpoint-up(medium){ //min width
+  @include breakpoint-up(large){ //min width
   #navMain ul li:hover ul,
   #navMain2 ul li:hover ul {
     display: inline-block;
