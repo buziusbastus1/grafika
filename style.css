@@ -110,7 +110,7 @@
   color: var(--clr-black);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .zdj #navMain li:hover > .a1 {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -136,7 +136,7 @@
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .zdj #navMain2 li:hover > .a2 {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -214,7 +214,7 @@
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .zdj #navMain ul li:hover ul,
   .zdj #navMain2 ul li:hover ul {
     display: inline-block;

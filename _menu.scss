@@ -51,7 +51,7 @@
     text-decoration: none;
     color: var(--clr-black);
   }
-  @include breakpoint-up(medium){
+  @include breakpoint-up(large){
   #navMain li:hover > .a1 {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -62,7 +62,7 @@
     transform: scaleX(1.01) translateX(1px);
   }
     }
-    @include breakpoint-down(large){
+    @include breakpoint-down(medium){
       .a1.mystyle{
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -72,7 +72,7 @@
       }  
   }
   // zdj2
-  @include breakpoint-up(medium){
+  @include breakpoint-up(large){
   #navMain2 li:hover > .a2 {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -84,7 +84,7 @@
   }
 }
 
-@include breakpoint-down(large){
+@include breakpoint-down(medium){
   .a2.mystyle{
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
