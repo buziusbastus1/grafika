@@ -91,6 +91,7 @@
   font-size: 6vh;
   font-weight: bold;
   margin-right:1% ;
+  margin-bottom:1% ;
 }
 
 .close:hover,
@@ -115,13 +116,51 @@
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
-  margin: 6.7% 6.7% 15% 6.7%;
+  
   overflow-wrap: break-word;
-  padding: 2%;
+  padding:1%;
   @include breakpoint-up(medium){
     font-size: 1.9rem;
-    margin: 6.7% 6.7% 6.7% 6.7%;
+    
   }
+    .demo a {
+      
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: var(--cz);
+      font: normal 400 20px/1 'Josefin Sans', sans-serif;
+      text-decoration: none;
+      transition: opacity .3s;
+      cursor: pointer;
+      @include breakpoint-down(medium) {
+        font: normal 400 15px/1 'Josefin Sans', sans-serif;
+        }
+    }
+  
+    .demo a:hover {
+      opacity: .5;
+    }
+  
+  
+  
+    #section01 a {
+      padding-top: 40px;
+    }
+  
+    #section01 a span {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      border-left: 1px solid var(--cz);
+      border-bottom: 1px solid var(--cz);
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+      box-sizing: border-box;
+      cursor: pointer;
+    }
 }
 
 .menu {
@@ -138,7 +177,8 @@
   margin-left: auto;
   margin-right: auto;
 }
-.btn-container {
+.btn-container,
+.btn-container1 {
   margin-bottom: 2rem;
   margin-top: 2rem;
   width: auto;
