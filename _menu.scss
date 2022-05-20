@@ -1,7 +1,6 @@
 .zdj {
   display: grid;
   grid-template-columns: auto auto;
-
  
   .zdj1 {
     grid-column: 1;
@@ -99,11 +98,10 @@
     position: relative;
     list-style: none;
     padding: 0;
-  font-weight: 300;
+    font-weight: 300;
     font-family: Verdana, sans-serif;
     color: var(--clr-white);
     margin-bottom: 1rem;
-    
   }
 
   #navMain ul ul,
@@ -118,17 +116,25 @@
     margin-right: 0px;
     text-align: center;
     display: block;
-    font-size: 3.5vw;
+    font-size: 3rem;
     @include breakpoint-down(medium) {
-      font-size: 5vw;
+      font-size: 2.5rem;
     }
+    @include breakpoint-down(small) {
+      font-size: 1.5rem;
+    }
+        @media only screen and (min-width: 87.5em) {
+          font-size: 4rem;
   }
-
+        @media only screen and (max-width: 350px) {
+          font-size: 1.3rem;
+  }
+  }
   #navMain ul li ul li,
   #navMain2 ul li ul li {
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-left: 5px;
+    
     margin-right: 5px;
   }
 
@@ -174,8 +180,8 @@ margin-top: 1rem;
   padding-bottom: 3rem;
   justify-content: center;
   @include breakpoint-down(medium) {
-      padding-bottom: 4rem;
-      margin-top: 4rem;
+      padding-bottom: 1rem;
+      margin-top: 0rem;
     }
 .zdj3 {
     grid-column: 1;
@@ -313,18 +319,29 @@ object-fit: cover;
       margin-right: 0px;
       text-align: center;
       display: block;
-      font-size: 3.5vw;
-  
-      @include breakpoint-down(medium) {
-        font-size: 5vw;
+      font-size: 3rem;
+      
+        @include breakpoint-down(medium) {
+          font-size: 2.5rem;
+        }
+      
+        @include breakpoint-down(small) {
+          font-size: 1.5rem;
+        }
+      
+        @media only screen and (min-width: 87.5em) {
+          font-size: 4rem;
+        }
+      
+        @media only screen and (max-width: 350px) {
+          font-size: 1.3rem;
+        }
       }
-    }
   
     #navMain3 ul li ul li,
     #navMain4 ul li ul li {
       padding-top: 5px;
       padding-bottom: 5px;
-      margin-left: 5px;
       margin-right: 5px;
     }
   
