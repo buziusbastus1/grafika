@@ -644,15 +644,23 @@ body {
   }
 }
 
-/* The Close Button */
 .close,
 .close1 {
   color: white;
   float: right;
-  font-size: 6vh;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-right: 1%;
   margin-bottom: 1%;
+  margin-top: 2%;
+}
+
+@media (min-width: 40em) {
+  .close,
+  .close1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
 }
 
 .close:hover,
@@ -665,7 +673,7 @@ body {
 }
 
 .modal-header {
-  padding: 1px 16px;
+  padding: 1% 18px;
   background-color: var(--light-green);
   color: var(--clr-black);
   width: auto;
@@ -683,7 +691,7 @@ body {
 
 @media (min-width: 40em) {
   #one {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -844,6 +852,101 @@ body {
 
 .ghj {
   color: rgba(174, 214, 224, 0.215);
+}
+
+/*
+.butt{
+  all: inherit;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5em 0;
+  cursor: pointer;
+}
+
+
+*/
+main {
+  border-width: 2px 0;
+  border-style: solid;
+}
+
+main > div + .h {
+  border-top: 2px solid;
+}
+
+main {
+  margin: 0;
+}
+
+label {
+  display: block;
+  padding: 10px 0px;
+  margin: 0 0 1px 0;
+  cursor: pointer;
+  border: 0;
+  position: relative;
+  text-align: left;
+}
+
+label::after {
+  content: '+';
+  font-weight: bold;
+  position: absolute;
+  right: 2%;
+  margin-left: 1%;
+}
+
+input:checked + label::after {
+  content: '-';
+  right: 2.5%;
+  margin-left: 1%;
+}
+
+input + label + .content {
+  display: none;
+}
+
+input:checked + label + .content {
+  display: block;
+}
+
+input {
+  display: none;
+}
+
+.content {
+  margin-bottom: 1%;
+}
+
+.content ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0.5em;
+          margin-block-start: 0.5em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+}
+
+.content .mie li {
+  margin-left: 2rem;
+}
+
+@media (min-width: 40em) {
+  .content .mie li {
+    margin-left: 4rem;
+  }
+}
+
+.content .mie div {
+  font-weight: bold;
 }
 
 .footer {
