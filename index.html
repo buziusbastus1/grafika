@@ -23,7 +23,7 @@
 
             <ul id="menu">
               <li>
-                <a id="desc1" onClick="setTimeout(scrollToBottom, delay)"
+                <a id="desc1" onClick="(scrollToBottom)"
                   >Biografia</a
                 >
               </li>
@@ -43,7 +43,7 @@
               <li>
                 <a
                   id="desc2"
-                  onClick="setTimeout(scrollToBottom, delay)"
+                  onClick="(scrollToBottom)"
                   value="a"
                   >Biografia</a
                 >
@@ -85,6 +85,7 @@
     </section>
 
     <div id="one"></div>
+    <h1 class ="prace">Podgląd prac</h1>
 
     <div class="wrapper">
       <div id="navMain3">
@@ -362,12 +363,19 @@
         element.scrollIntoView({ block: "center" });
       }
 
-      function scrollToBottom() {
-        const element = document.getElementById("one");
-        element.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-      var delay = 10;
-      setTimeout(myfunction, delay);
+      // function scrollToBottom() {
+      //   const element = document.getElementById("one");
+      //   element.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      // }
+      // var delay = 10;
+      // setTimeout(myfunction, delay);
+function scrollToBottom() {
+  const element = document.getElementById("one");
+  element.scrollIntoView({ behavior: "smooth", block: "end" });
+}
+
+document.getElementById("desc1").addEventListener("click", scrollToBottom);
+document.getElementById("desc2").addEventListener("click", scrollToBottom);
 
       function myFunction() {
         const men = document.getElementById("menu");

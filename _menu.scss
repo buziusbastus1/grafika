@@ -1,12 +1,13 @@
 .zdj {
   display: grid;
   grid-template-columns: auto auto;
- 
+
   .zdj1 {
     grid-column: 1;
     margin-right: auto;
     width: 60%;
     pointer-events: none;
+
     @include breakpoint-down(medium) {
       width: 100%;
     }
@@ -17,6 +18,7 @@
     margin-left: auto;
     width: 60%;
     pointer-events: none;
+
     @include breakpoint-down(medium) {
       width: 100%;
     }
@@ -40,43 +42,47 @@
 
   #navMain ul li,
   #navMain2 ul li {
-     text-align: center;
+    text-align: center;
     margin-right: 1%;
     margin-left: 1%;
-      display: table;
-        margin: 0 auto;
+    display: table;
+    margin: 0 auto;
   }
-  
+
   #navMain li a,
   #navMain2 li a {
     display: block;
     text-decoration: none;
     color: var(--clr-black);
   }
-  @include breakpoint-up(large){
-  #navMain li:hover > .a1 {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%) blur(1px);
-    filter: gray;
-    transition-duration: 0.5s;
-    transform: translateX(1px);
-  }
+
+  @include breakpoint-up(large) {
+    #navMain li:hover>.a1 {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%) blur(1px);
+      filter: gray;
+      transition-duration: 0.5s;
+      transform: translateX(1px);
     }
-    @include breakpoint-down(medium){
-      .a1.mystyle,
-      .a2.mystyle{
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        filter: grayscale(100%) blur(1px);
-        filter: gray;
-        
-      }  
   }
+
+  @include breakpoint-down(medium) {
+
+    .a1.mystyle,
+    .a2.mystyle {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%) blur(1px);
+      filter: gray;
+
+    }
+  }
+
   // zdj2
-    @include breakpoint-up(large) {
+  @include breakpoint-up(large) {
     #navMain2 li:hover>.a2 {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -116,20 +122,25 @@
     margin-right: 0px;
     text-align: center;
     display: block;
-    font-size: 3rem;
+    font-size: 2.75rem;
+
     @include breakpoint-down(medium) {
       font-size: 2.5rem;
     }
+
     @include breakpoint-down(small) {
       font-size: 1.5rem;
     }
-        @media only screen and (min-width: 87.5em) {
-          font-size: 4rem;
+
+    @media only screen and (min-width: 87.5em) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 1.3rem;
+    }
   }
-        @media only screen and (max-width: 350px) {
-          font-size: 1.3rem;
-  }
-  }
+
   #navMain ul li ul li,
   #navMain2 ul li ul li {
     padding-top: 5px;
@@ -137,23 +148,27 @@
     margin-right: 10px;
   }
 
-  @include breakpoint-down(medium){ //max width
-  #navMain ul ul.mystyle,
-  #navMain2 ul ul.mystyle {
-    display: inline-block;
-  }
-}
+  @include breakpoint-down(medium) {
 
-  @include breakpoint-up(large){ //min width
-  #navMain ul li:hover ul,
-  #navMain2 ul li:hover ul {
-    display: inline-block;
+    //max width
+    #navMain ul ul.mystyle,
+    #navMain2 ul ul.mystyle {
+      display: inline-block;
+    }
   }
-}
 
-#menu.mstyle{
-  display: none;
-}
+  @include breakpoint-up(large) {
+
+    //min width
+    #navMain ul li:hover ul,
+    #navMain2 ul li:hover ul {
+      display: inline-block;
+    }
+  }
+
+  #menu.mstyle {
+    display: none;
+  }
 
   #navMain #menu,
   #navMain2 #menu1 {
@@ -175,30 +190,34 @@
 .wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
-margin-top: 1rem;
+  margin-top: 1rem;
   padding-bottom: 3rem;
   justify-content: center;
+
   @include breakpoint-down(medium) {
-      padding-bottom: 1rem;
-      margin-top: 0rem;
-    }
-.zdj3 {
+    padding-bottom: 1rem;
+    margin-top: 0rem;
+  }
+
+  .zdj3 {
     grid-column: 1;
-      
-        
+
+
     object-fit: cover;
-    
+
     pointer-events: none;
-width: 60%;
+    width: 60%;
+
     @include breakpoint-down(medium) {
       width: 100%;
     }
   }
-.zdj4 {
+
+  .zdj4 {
     grid-column: 2;
-object-fit: cover;
+    object-fit: cover;
     margin: 0 auto;
-    
+
     width: 60%;
     pointer-events: none;
 
@@ -211,176 +230,174 @@ object-fit: cover;
   }
 
 
-    #menu3 li,
-    #menu4 li {
-      background-color: var(--li);
-      border-radius: 5px;
-      border-style: solid;
-      border-color: black;
-      width: 100%;
+  #menu3 li,
+  #menu4 li {
+    background-color: var(--li);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+  }
+
+  #navMain3 ul,
+  #navMain4 ul {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+
+  #navMain3 ul li,
+  #navMain4 ul li {
+    text-align: center;
+    margin-right: 1%;
+    margin-left: 1%;
+    display: table;
+    margin: 0 auto;
+  }
+
+  #navMain3 li a,
+  #navMain4 li a {
+    display: block;
+    text-decoration: none;
+    color: var(--clr-black);
+  }
+
+  @include breakpoint-up(large) {
+    #navMain3 li:hover>.a3 {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%) blur(1px);
+      filter: gray;
+      transition-duration: 0.5s;
+      transform: translateX(1px);
     }
-  
-    #navMain3 ul,
-    #navMain4 ul {
-      padding: 0;
-      margin: 0;
-      z-index: 1;
+  }
+
+  @include breakpoint-down(medium) {
+    .a3.mystyle {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%) blur(1px);
+      filter: gray;
     }
-  
-    #navMain3 ul li,
-    #navMain4 ul li {
-      text-align: center;
-      margin-right: 1%;
-      margin-left: 1%;
-      display: table;
-        margin: 0 auto;
+  }
+
+  // zdj2
+  @include breakpoint-up(large) {
+    #navMain4 li:hover>.a4 {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%) blur(1px);
+      filter: gray;
+      transition-duration: 0.5s;
+      transform: translateX(-1px);
     }
-  
-    #navMain3 li a,
-    #navMain4 li a {
-      display: block;
-      text-decoration: none;
-      color: var(--clr-black);
+  }
+
+  @include breakpoint-down(medium) {
+    .a4.mystyle {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      filter: grayscale(100%) blur(1px);
+      filter: gray;
     }
-  
-    @include breakpoint-up(large) {
-      #navMain3 li:hover>.a3 {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        filter: grayscale(100%) blur(1px);
-        filter: gray;
-        transition-duration: 0.5s;
-        transform: translateX(1px);
-      }
-    }
-  
+  }
+
+  #navMain3 ul li:last-child,
+  #navMain4 ul li:last-child {
+    margin-bottom: 0px;
+  }
+
+  #navMain3 li,
+  #navMain4 li {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    font-weight: 300;
+    font-weight: 600;
+    font-family: Open Sans, sans-serif;
+    color: var(--clr-white);
+    margin-bottom: 1rem;
+
+  }
+
+  #navMain3 ul ul,
+  #navMain4 ul ul {
+    position: absolute;
+    top: 20px;
+    display: none;
+  }
+
+  #navMain3 ul li ul li,
+  #navMain4 ul li ul li {
+    margin-right: 0px;
+    text-align: center;
+    display: block;
+    font-size: 2.75rem;
+
     @include breakpoint-down(medium) {
-      .a3.mystyle {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        filter: grayscale(100%) blur(1px);
-        filter: gray;
-      }
-    }
-  
-    // zdj2
-    @include breakpoint-up(large) {
-      #navMain4 li:hover>.a4 {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        filter: grayscale(100%) blur(1px);
-        filter: gray;
-        transition-duration: 0.5s;
-        transform: translateX(-1px);
-      }
-    }
-  
-    @include breakpoint-down(medium) {
-      .a4.mystyle {
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        filter: grayscale(100%) blur(1px);
-        filter: gray;
-      }
-    }
-  
-    #navMain3 ul li:last-child,
-    #navMain4 ul li:last-child {
-      margin-bottom: 0px;
-    }
-  
-    #navMain3 li,
-    #navMain4 li {
-      position: relative;
-      list-style: none;
-      padding: 0;
-      font-weight: 300;
-      font-weight: 600;
-      font-family: Open Sans, sans-serif;
-      color: var(--clr-white);
-      margin-bottom: 1rem;
-      
-    }
-  
-    #navMain3 ul ul,
-    #navMain4 ul ul {
-      position: absolute;
-      top: 20px;
-      display: none;
-    }
-  
-    #navMain3 ul li ul li,
-    #navMain4 ul li ul li {
-      margin-right: 0px;
-      text-align: center;
-      display: block;
-      font-size: 3rem;
-      
-        @include breakpoint-down(medium) {
-          font-size: 2.5rem;
-        }
-      
-        @include breakpoint-down(small) {
-          font-size: 1.5rem;
-        }
-      
-        @media only screen and (min-width: 87.5em) {
-          font-size: 4rem;
-        }
-      
-        @media only screen and (max-width: 350px) {
-          font-size: 1.3rem;
-        }
-      }
-  
-    #navMain3 ul li ul li,
-    #navMain4 ul li ul li {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      margin-right: 10px;
-    }
-  
-    @include breakpoint-down(medium) {
-  
-      //max width
-      #navMain3 ul ul.mystyle,
-      #navMain4 ul ul.mystyle {
-        display: inline-block;
-      }
-    }
-  
-    @include breakpoint-up(large) {
-  
-      //min width
-      #navMain3 ul li:hover ul,
-      #navMain4 ul li:hover ul {
-        display: inline-block;
-      }
-    }
-  
-    #menu3.mstyle {
-      display: none;
-    }
-  
-    #navMain3 #menu3,
-    #navMain4 #menu4 {
-      transform: translate(-50%, -50%);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-    }
-  
-    #menu3 li:hover,
-    #menu4 li:hover {
-      background: var(--menu);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-    }
-  
+      font-size: 2.5rem;
     }
 
+    @include breakpoint-down(small) {
+      font-size: 1.5rem;
+    }
 
+    @media only screen and (min-width: 87.5em) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  #navMain3 ul li ul li,
+  #navMain4 ul li ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+  }
+
+  @include breakpoint-down(medium) {
+
+    //max width
+    #navMain3 ul ul.mystyle,
+    #navMain4 ul ul.mystyle {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint-up(large) {
+
+    //min width
+    #navMain3 ul li:hover ul,
+    #navMain4 ul li:hover ul {
+      display: inline-block;
+    }
+  }
+
+  #menu3.mstyle {
+    display: none;
+  }
+
+  #navMain3 #menu3,
+  #navMain4 #menu4 {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  #menu3 li:hover,
+  #menu4 li:hover {
+    background: var(--menu);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+}

@@ -1,10 +1,8 @@
 const body = document.querySelector('body')
 
-// Get the modal
 const modal = document.getElementById('myModal')
 const modal1 = document.getElementById('myModal1')
 
-// Get the button that opens the modal
 const btn = document.getElementById('myBtn')
 const btn1 = document.getElementById('myBtn1')
 
@@ -12,7 +10,6 @@ const btn1 = document.getElementById('myBtn1')
 const span = document.getElementsByClassName('close')[0]
 const span1 = document.getElementsByClassName('close1')[0]
 
-// When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = 'block'
   body.style.overflow = 'hidden'
@@ -23,7 +20,6 @@ btn1.onclick = function () {
   body.style.overflow = 'hidden'
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = 'none'
   body.style.overflow = 'auto'
@@ -347,6 +343,7 @@ function displayMenuButtons () {
         if (menuItem.category === category) {
           return menuItem
         }
+        return false
       })
       if (category === 'wszystkie') {
         diplayMenuItems(menu)
@@ -582,6 +579,7 @@ function displayMenuButtons1 () {
         if (menuItem1.category1 === category1) {
           return menuItem1
         }
+        return false
       })
       if (category1 === 'wszystkie') {
         diplayMenuItems1(menu1)
