@@ -371,7 +371,7 @@
       // setTimeout(myfunction, delay);
 function scrollToBottom() {
   const element = document.getElementById("one");
-  element.scrollIntoView({ behavior: "smooth", block: "end" });
+  element.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 document.getElementById("desc1").addEventListener("click", scrollToBottom);
