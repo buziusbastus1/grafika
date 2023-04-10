@@ -435,43 +435,36 @@ body {
   background: #555;
 }
 
-.header {
+h1.header {
   position: relative;
   z-index: 1;
   text-align: center;
-  background: white;
-  padding: 0;
   width: 100%;
   font-family: "Public Sans", sans-serif;
-  font-weight: 300;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  font-size: large;
+  font-size: 2.5rem;
 }
 
-.prace {
+h1.prace {
   position: relative;
   z-index: 1;
   text-align: center;
   width: 100%;
   font-family: "Public Sans", sans-serif;
   overflow-x: hidden;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
   margin-top: 2vh;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 39.9375em) {
-  .header {
-    font-size: 4vw;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+  h1.header {
+    font-size: 2rem;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
   }
-  .prace {
-    font-size: 6vw;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+  h1.prace {
+    font-size: 2rem;
   }
 }
 .modal {
